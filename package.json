@@ -1,0 +1,19 @@
+{
+    "name": "ip-address-tracker-master",
+    "version": "1.0.0",
+    "description": "",
+    "source": "index.html",
+    "scripts": {
+        "start": "parcel",
+        "build": "parcel build"
+    },
+    "author": "Prince Roy",
+    "license": "ISC",
+    "devDependencies": {
+        "@parcel/transformer-sass": "^2.7.0",
+        "parcel": "^2.7.0"
+    },
+    "dependencies": {
+        "sass": "^1.54.5"
+    }
+}
