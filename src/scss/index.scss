@@ -1,3 +1,48 @@
-p {
-    color: pink;
+@use 'variables'as var;
+*::before,
+*::after,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var.$font-family;
+}
+
+.tracker {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-image: url("../images/pattern-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &--heading {
+        font-weight: var.$fw-500;
+        color: hsl(0, 0%, 100%);
+    }
+    &__form--input {
+        width: 100%;
+    }
+}
+
+.info {
+    position: absolute;
+    bottom: -7rem;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    box-shadow: 0 1rem 2rem -2rem;
 }
