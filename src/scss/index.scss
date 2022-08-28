@@ -8,7 +8,7 @@
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 35% 75%;
+    grid-template-rows: 1fr 2fr;
     font-family: var.$font-family;
 }
 
@@ -20,18 +20,27 @@
     gap: 1.4rem;
     background-image: url("../images/pattern-bg.png");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 35vh;
+    @media(min-width: 45rem) {
+        align-items: center;
+    }
     &--heading {
         font-size: 1.6rem;
         text-align: center;
         font-weight: var.$fw-500;
         color: hsl(0, 0%, 100%);
+        @media(min-width: 1024px) {
+            font-size: 2.2rem;
+        }
     }
     &__form {
         display: flex;
         align-items: center;
         border-radius: 10px;
         overflow: hidden;
+        @media(min-width: 45rem) {
+            width: min(90%, 500px);
+        }
     }
     &__form--btn {
         padding: 1rem 1.3rem;
@@ -52,24 +61,29 @@
 }
 
 .tracker__info {
-    width: calc(100% + -2.8rem);
+    width: min(88.5%, 1200px);
     position: absolute;
-    bottom: -7.6rem;
+    bottom: -12rem;
     z-index: 3;
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
     justify-items: center;
     text-align: center;
     padding: 1rem;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 1rem 2rem -2rem;
-    address {
-        font-style: normal;
+    @media(min-width: 45rem) {
+        justify-items: flex-start;
+        bottom: -7rem;
+        text-align: start;
+        padding-block: 3rem;
+        padding-inline: 2rem;
     }
     p:nth-of-type(1) {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
         text-transform: uppercase;
         font-weight: var.$fw-500;
         color: var.$dark-gray;
@@ -78,5 +92,19 @@
         font-size: var.$font-size;
         font-weight: var.$fw-700;
         color: var.$very-dark-gray;
+        @media(min-width: 1280px) {
+            font-size: 1.7rem;
+        }
+    }
+}
+
+.data {
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    @media(min-width: 1024rem) {
+        padding-right: 3rem;
+        border-right: 2px solid var.$very-dark-gray;
     }
 }
