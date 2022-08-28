@@ -1,4 +1,4 @@
-@use 'variables'as var;
+@use "variables"as var;
 * {
     margin: 0;
     padding: 0;
@@ -14,14 +14,14 @@
 
 .tracker {
     position: relative;
-    padding: 1.4rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
+    gap: 1.7rem;
     background-image: url("../images/pattern-bg.png");
     background-repeat: no-repeat;
     background-size: 100% 35vh;
-    @media(min-width: 45rem) {
+    @media (min-width: 45rem) {
         align-items: center;
     }
     &--heading {
@@ -29,7 +29,7 @@
         text-align: center;
         font-weight: var.$fw-500;
         color: hsl(0, 0%, 100%);
-        @media(min-width: 1024px) {
+        @media (min-width: 1024px) {
             font-size: 2.2rem;
         }
     }
@@ -38,7 +38,7 @@
         align-items: center;
         border-radius: 10px;
         overflow: hidden;
-        @media(min-width: 45rem) {
+        @media (min-width: 45rem) {
             width: min(90%, 500px);
         }
     }
@@ -61,38 +61,45 @@
 }
 
 .tracker__info {
-    width: min(88.5%, 1200px);
+    width: min(88%, 1200px);
     position: absolute;
-    bottom: -12rem;
+    bottom: -11rem;
     z-index: 3;
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
     justify-items: center;
     text-align: center;
-    padding: 1rem;
+    padding: 1.5rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 15px;
     box-shadow: 0 1rem 2rem -2rem;
-    @media(min-width: 45rem) {
+    @media(max-width: 376px) {
+        bottom: -16rem;
+    }
+    @media (min-width: 45rem) {
         justify-items: flex-start;
         bottom: -7rem;
+        gap: 2rem;
         text-align: start;
         padding-block: 3rem;
         padding-inline: 2rem;
     }
     p:nth-of-type(1) {
         font-size: 0.8rem;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-transform: uppercase;
         font-weight: var.$fw-500;
         color: var.$dark-gray;
+        @media(min-width: 1024px) {
+            letter-spacing: 2px;
+        }
     }
     p:nth-of-type(2) {
-        font-size: var.$font-size;
+        font-size: 1.4rem;
         font-weight: var.$fw-700;
         color: var.$very-dark-gray;
-        @media(min-width: 1280px) {
+        @media (min-width: 1280px) {
             font-size: 1.7rem;
         }
     }
@@ -102,9 +109,19 @@
     font-style: normal;
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
-    @media(min-width: 1024rem) {
-        padding-right: 3rem;
-        border-right: 2px solid var.$very-dark-gray;
+    gap: 0.4rem;
+    &:not(&:last-child) {
+        @media(min-width: 1024px) {
+            border-right: 1px solid var.$very-dark-gray;
+        }
     }
+    @media (min-width: 1024px) {
+        padding-right: 3rem;
+        gap: 0.7rem;
+    }
+}
+
+#map {
+    height: 100%;
+    z-index: 1;
 }
