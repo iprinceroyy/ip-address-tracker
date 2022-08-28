@@ -1,6 +1,4 @@
 @use 'variables'as var;
-*::before,
-*::after,
 * {
     margin: 0;
     padding: 0;
@@ -9,40 +7,76 @@
 
 .container {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-rows: 35% 75%;
     font-family: var.$font-family;
 }
 
 .tracker {
-    width: 100%;
     position: relative;
+    padding: 1.4rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    gap: 1.4rem;
     background-image: url("../images/pattern-bg.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     &--heading {
+        font-size: 1.6rem;
+        text-align: center;
         font-weight: var.$fw-500;
         color: hsl(0, 0%, 100%);
     }
+    &__form {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    &__form--btn {
+        padding: 1rem 1.3rem;
+        background-color: hsl(0, 0%, 0%);
+    }
     &__form--input {
         width: 100%;
+        border: none;
+        padding: 1rem;
+        font-family: inherit;
+        font-size: var.$font-size;
+        font-weight: var.$fw-400;
+        color: var.$very-dark-gray;
+        &:focus-visible {
+            outline: none;
+        }
     }
 }
 
-.info {
+.tracker__info {
+    width: calc(100% + -2.8rem);
     position: absolute;
-    bottom: -7rem;
+    bottom: -7.6rem;
     z-index: 3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: center;
+    text-align: center;
+    padding: 1rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-shadow: 0 1rem 2rem -2rem;
+    address {
+        font-style: normal;
+    }
+    p:nth-of-type(1) {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        font-weight: var.$fw-500;
+        color: var.$dark-gray;
+    }
+    p:nth-of-type(2) {
+        font-size: var.$font-size;
+        font-weight: var.$fw-700;
+        color: var.$very-dark-gray;
+    }
 }
