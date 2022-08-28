@@ -14,6 +14,8 @@
         "parcel": "^2.7.0"
     },
     "dependencies": {
-        "sass": "^1.54.5"
+        "core-js": "^3.25.0",
+        "leaflet": "^1.8.0",
+        "regenerator-runtime": "^0.13.9"
     }
 }
