@@ -8,12 +8,11 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
 
-    <link rel="stylesheet" href="src/scss/index.scss">
-
+    <!--  Leaflet  -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
-
-    <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+
+    <link rel="stylesheet" href="src/scss/index.scss">
 
     <script type="module" defer src="./src/js/controller.js"></script>
 
@@ -25,9 +24,9 @@
         <h1 class="tracker--heading">IP Address Tracker</h1>
         <form class="tracker__form">
             <input type="text" class="tracker__form--input" placeholder="Search for any IP adrress or domain" aria-label="IP Adrress Input">
-            <div class="tracker__form--btn">
+            <button class="tracker__form--btn" type="submit">
                 <img src="./src/images/icon-arrow.svg" alt="right arrow">
-            </div>
+            </button>
         </form>
         <div class="info tracker__info">
             <address class="data">
