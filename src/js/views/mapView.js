@@ -5,7 +5,7 @@ class MapView {
   renderMap(coords, markerIcon) {
     this._map && this._map.remove() && this._map.off();
 
-    this._map = L.map('map').setView(coords, 16);
+    this._map = L.map('map', { attributionControl: false }).setView(coords, 16);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution:
