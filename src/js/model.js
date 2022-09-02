@@ -5,7 +5,7 @@ export const state = {
   info: {},
 };
 
-export const loadAddress = async (ip = '8.8.8.8') => {
+export const loadAddress = async ip => {
   try {
     const data = await getJSON(`${IP_API_URL}${ip}`);
     console.log(data);

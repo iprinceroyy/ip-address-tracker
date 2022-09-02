@@ -8,7 +8,6 @@ const controlAddress = async () => {
   try {
     // 1) Get IP
     const ip = searchView.getQuery();
-    if (!ip) return;
 
     // 2) Load address
     await model.loadAddress(ip);
@@ -25,6 +24,10 @@ const controlAddress = async () => {
 };
 
 const init = () => {
+  // 1) Handler form inputs
   searchView.addHandlerSearch(controlAddress);
+
+  // 2) Default
+  controlAddress();
 };
 init();
