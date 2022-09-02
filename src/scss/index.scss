@@ -1,4 +1,5 @@
 @use "variables"as var;
+
 * {
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
 .container {
     min-height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 2fr; // 1/3 part for 1-section & 2/3 part for 2-section
     font-family: var.$font-family;
 }
 
@@ -20,32 +21,39 @@
     gap: 1.7rem;
     background-image: url("../images/pattern-bg.png");
     background-repeat: no-repeat;
-    background-size: 100% 35vh;
+    background-size: 100% 100%;
+
     @media (min-width: 45rem) {
         align-items: center;
     }
+
     &--heading {
         font-size: 1.6rem;
         text-align: center;
         font-weight: var.$fw-500;
         color: hsl(0, 0%, 100%);
+
         @media (min-width: 1024px) {
             font-size: 2.2rem;
         }
     }
+
     &__form {
         display: flex;
         align-items: center;
         border-radius: 10px;
         overflow: hidden;
+
         @media (min-width: 45rem) {
             width: min(90%, 500px);
         }
     }
+
     &__form--btn {
         padding: 1rem 1.3rem;
         background-color: hsl(0, 0%, 0%);
     }
+
     &__form--input {
         width: 100%;
         border: none;
@@ -54,6 +62,7 @@
         font-size: var.$font-size;
         font-weight: var.$fw-400;
         color: var.$very-dark-gray;
+
         &:focus-visible {
             outline: none;
         }
@@ -61,7 +70,7 @@
 }
 
 .tracker__info {
-    width: min(88%, 1200px);
+    width: min(88%, 1000px);
     position: absolute;
     bottom: -11rem;
     z-index: 3;
@@ -74,33 +83,37 @@
     background-color: hsl(0, 0%, 100%);
     border-radius: 15px;
     box-shadow: 0 1rem 2rem -2rem;
+
     @media(max-width: 376px) {
         bottom: -16rem;
     }
-    @media (min-width: 45rem) {
-        justify-items: flex-start;
+
+    @media (min-width: 1280px) {
         bottom: -7rem;
-        gap: 2rem;
         text-align: start;
-        padding-block: 3rem;
+        padding-block: 2rem;
         padding-inline: 2rem;
     }
+
     p:nth-of-type(1) {
         font-size: 0.8rem;
         letter-spacing: 1px;
         text-transform: uppercase;
         font-weight: var.$fw-500;
         color: var.$dark-gray;
+
         @media(min-width: 1024px) {
             letter-spacing: 2px;
         }
     }
+
     p:nth-of-type(2) {
         font-size: 1.4rem;
         font-weight: var.$fw-700;
         color: var.$very-dark-gray;
+
         @media (min-width: 1280px) {
-            font-size: 1.7rem;
+            font-size: 1.4rem;
         }
     }
 }
@@ -110,11 +123,13 @@
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+
     &:not(&:last-child) {
         @media(min-width: 1024px) {
             border-right: 1px solid var.$very-dark-gray;
         }
     }
+
     @media (min-width: 1024px) {
         padding-right: 3rem;
         gap: 0.7rem;
