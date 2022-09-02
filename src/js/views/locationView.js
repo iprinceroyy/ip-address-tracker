@@ -24,7 +24,7 @@ class LocationView {
 
             <time class="data">
                 <p>timezone</p>
-                <p>utc ${this._data.timezone}</p>
+                <p>UTC ${this._data.timezone}</p>
             </time>
 
             <address class="data">
