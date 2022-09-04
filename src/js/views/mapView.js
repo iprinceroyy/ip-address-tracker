@@ -1,8 +1,6 @@
 import markerIcon from '../../images/icon-location.svg';
 
 class MapView {
-  _parentEl = document.querySelector('#map');
-  _errorMessage = 'Map Object not found';
   _map;
 
   _loadMap(coords) {
@@ -26,8 +24,7 @@ class MapView {
 
     const myIcon = L.icon({
       iconUrl: markerIcon,
-      iconSize: [50, 60],
-      iconAnchor: [30, 60],
+      iconSize: [62, 70],
       popupAnchor: [-3, -76],
     });
 
