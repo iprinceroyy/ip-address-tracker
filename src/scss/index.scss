@@ -63,13 +63,14 @@
     background-color: var.$black;
     outline: 3px solid transparent;
     border: none;
-    &:hover {
+    &:active {
       cursor: pointer;
       background-color: var.$dark-gray;
     }
     @media (hover: hover) {
       &:hover {
         cursor: pointer;
+        background-color: var.$dark-gray;
       }
     }
   }
