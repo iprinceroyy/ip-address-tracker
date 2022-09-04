@@ -2,6 +2,7 @@ import markerIcon from '../../images/icon-location.svg';
 
 class MapView {
   _parentEl = document.querySelector('#map');
+  _errorMessage = 'Map Object not found';
   _map;
 
   _loadMap(coords) {

@@ -23,6 +23,7 @@ const controlAddress = async () => {
     mapView.renderMap(coords, map_url, attribution);
   } catch (err) {
     console.log(`${err} 🤦‍♂️`);
+    locationView.renderError(err);
   }
 };
 

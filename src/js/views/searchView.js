@@ -3,7 +3,6 @@ class SearchView {
 
   getQuery() {
     const query = this._parentEl.querySelector('.tracker__form--input').value;
-    console.log(query);
     this._clearInput();
     return query;
   }
