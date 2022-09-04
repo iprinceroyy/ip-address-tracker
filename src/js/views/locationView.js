@@ -1,5 +1,8 @@
+import spinner from '../../images/spinner-gap.svg';
+
 class LocationView {
   _parentEl = document.querySelector('.tracker__info');
+  _map = document.querySelector('#map');
   _data;
 
   render(data) {
@@ -8,6 +11,16 @@ class LocationView {
 
     this._parentEl.innerHTML = '';
     this._parentEl.insertAdjacentHTML('beforeend', markup);
+  }
+
+  renderSpinner() {
+    const markup = `
+        <div class="spinner">
+          <img src="${spinner}" alt="spinner" />
+        </div>
+      `;
+    this._parentEl.insertAdjacentHTML('afterbegin', markup);
+    this._map.insertAdjacentHTML('afterbegin', markup);
   }
 
   _generateMarkup() {

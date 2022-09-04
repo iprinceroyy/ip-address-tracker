@@ -110,6 +110,25 @@
     word-break: break-word;
   }
 }
+.spinner {
+  position: relative;
+  left: min(40%, 1200px);
+  width: 4rem;
+  height: 4rem;
+  img {
+    width: 100%;
+    animation: spin 1.5s ease-in infinite;
+    filter: grayscale(2);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .data {
   font-style: normal;

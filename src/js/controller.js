@@ -2,22 +2,25 @@ import * as model from './model';
 import mapView from './views/mapView';
 import searchView from './views/searchView';
 import locationView from './views/locationView';
-import markerIcon from '../images/icon-location.svg';
 
 const controlAddress = async () => {
   try {
-    // 1) Get IP
+    // 1) Load spinner while loading data
+    locationView.renderSpinner();
+
+    // 2) Get IP
     const ip = searchView.getQuery();
 
-    // 2) Load address
+    // 3) Load address
     await model.loadAddress(ip);
 
-    // 3) Render address
+    // 4) Render address
     locationView.render(model.state.info);
 
-    // 4) Load map & Render
+    // 5) Render map
+    const { map_url, attribution } = model.getMapUrls();
     const coords = [model.state.info.lat, model.state.info.lng];
-    mapView.renderMap(coords, markerIcon);
+    mapView.renderMap(coords, map_url, attribution);
   } catch (err) {
     console.log(`${err} 🤦‍♂️`);
   }

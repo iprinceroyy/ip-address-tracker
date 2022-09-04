@@ -1,4 +1,4 @@
-import { IP_API_URL } from './config';
+import { IP_API_URL, MAP_URL, ATTRIBUTION } from './config';
 import { getJSON } from './helpers';
 
 export const state = {
@@ -27,7 +27,9 @@ export const loadAddress = async ip => {
   }
 };
 
-export const loadMap = async () => {
-  const { lat, lng } = state.info;
-  return [lat, lng];
+export const getMapUrls = () => {
+  return {
+    map_url: MAP_URL,
+    attribution: ATTRIBUTION,
+  };
 };

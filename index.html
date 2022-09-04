@@ -1,35 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./src/images/favicon-32x32.png"
+    />
 
     <!--  Leaflet  -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
 
-    <link rel="stylesheet" href="src/scss/index.scss">
+    <link rel="stylesheet" href="src/scss/index.scss" />
 
     <script type="module" defer src="./src/js/controller.js"></script>
 
     <title>IP Address Tracker</title>
-</head>
+  </head>
 
-<body class="container">
+  <body class="container">
     <header class="tracker">
-        <h1 class="tracker--heading">IP Address Tracker</h1>
-        <form class="tracker__form">
-            <input type="text" class="tracker__form--input" placeholder="Search for any IP adrress or domain" aria-label="IP Adrress Input">
-            <button class="tracker__form--btn" type="submit">
-                <img src="./src/images/icon-arrow.svg" alt="right arrow">
-            </button>
-        </form>
-        <div class="info tracker__info">
-            <!-- <address class="data">
+      <h1 class="tracker--heading">IP Address Tracker</h1>
+      <form class="tracker__form">
+        <input
+          type="text"
+          class="tracker__form--input"
+          placeholder="Search for any IP adrress or domain"
+          aria-label="IP Adrress Input"
+        />
+
+        <button class="tracker__form--btn" type="submit">
+          <img src="./src/images/icon-arrow.svg" alt="right arrow" />
+        </button>
+      </form>
+      <div class="info tracker__info">
+        <!-- <div class="spinner">
+          <img src="src/images/spinner-gap.svg" alt="spinner" />
+        </div> -->
+        <!-- <address class="data">
                 <p>ip address</p>
                 <p>192.212.174.101</p>
             </address>
@@ -48,11 +70,11 @@
                 <p>isp</p>
                 <p>SpaceX Starlink</p>
             </address> -->
-        </div>
+      </div>
     </header>
 
     <main>
-        <div id="map"></div>
+      <div id="map"></div>
     </main>
     <!--IP Address Tracker Search for any IP address or domain IP Address Location Timezone UTC
      add offset value dynamically using the API
@@ -62,6 +84,5 @@
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
         </div>
     </footer> -->
-</body>
-
+  </body>
 </html>
