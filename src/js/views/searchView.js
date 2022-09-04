@@ -1,16 +1,31 @@
+/** @public */
 class SearchView {
   _parentEl = document.querySelector('.tracker__form');
 
+  /**
+   * Get the input value from the user
+   * @public
+   * @returns {string} An input value
+   * @this {Object} An instance of SearchView
+   */
   getQuery() {
     const query = this._parentEl.querySelector('.tracker__form--input').value;
     this._clearInput();
     return query;
   }
 
+  /**
+   * @protected
+   */
   _clearInput() {
     this._parentEl.querySelector('.tracker__form--input').value = '';
   }
 
+  /**
+   * Add handler to the element
+   * @param {function} handler - A callback function
+   * @public
+   */
   addHandlerSearch(handler) {
     this._parentEl.addEventListener('submit', function (e) {
       e.preventDefault();

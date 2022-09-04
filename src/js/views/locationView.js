@@ -5,6 +5,12 @@ class LocationView {
   _errorMessage = `IP not found! Please check you internet connection & retry`;
   _data;
 
+  /**
+   * Render the received object to the DOM
+   * @param {Object} data - An object of data to be rendered
+   * @returns {}
+   * @public
+   */
   render(data) {
     this._data = data;
     const markup = this._generateMarkup();
@@ -12,6 +18,13 @@ class LocationView {
     this._addMarkup(markup);
   }
 
+  /**
+   * Render a error message to the DOM
+   * @param {string} err - An error message of the Error object
+   * @this {Object} an instance of LocationView
+   * @returns {}
+   * @public
+   */
   renderError(err) {
     const markup = `
     <p>${this._errorMessage} ${err.message}</p>
@@ -19,12 +32,22 @@ class LocationView {
     this._addMarkup(markup);
   }
 
+  /**
+   * Take a markup and add to the DOM
+   * @param {html} markup - A markup to be rendered
+   * @yields {}
+   * @protected
+   */
   _addMarkup(markup) {
     this._parentEl.innerHTML = '';
-
     this._parentEl.insertAdjacentHTML('beforeend', markup);
   }
 
+  /**
+   * Render a spinner to the DOM
+   * @requires ../../images/spinner-gap.svg
+   * @public
+   */
   renderSpinner() {
     const markup = `
         <div class="spinner">
@@ -34,6 +57,11 @@ class LocationView {
     this._addMarkup(markup);
   }
 
+  /**
+   * Return a markup
+   * @returns {markup} A markup to be added to the DOM
+   * @protected
+   */
   _generateMarkup() {
     return `
       <address class="data">

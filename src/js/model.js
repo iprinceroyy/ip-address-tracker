@@ -5,6 +5,13 @@ export const state = {
   info: {},
 };
 
+/**
+ * Fetch the info of the specified ip address
+ * @param {string} ip - An ip address
+ * @returns {Promise.<string>}
+ * @requires views/helpers.getJSON
+ * @throws {Exception}
+ */
 export const loadAddress = async ip => {
   try {
     const data = await getJSON(`${IP_API_URL}${ip}`);
@@ -24,6 +31,10 @@ export const loadAddress = async ip => {
   }
 };
 
+/**
+ *
+ * @returns {Object} An object of leaflet map url
+ */
 export const getMapUrls = () => {
   return {
     map_url: MAP_URL,

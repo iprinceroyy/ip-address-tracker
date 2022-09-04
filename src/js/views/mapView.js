@@ -3,16 +3,16 @@ import markerIcon from '../../images/icon-location.svg';
 class MapView {
   _map;
 
-  _loadMap(coords) {
-    this._map && this._map.remove() && this._map.off();
-
-    this._map = L.map('map', {
-      scrollWheelZoom: false,
-      smoothWheelZoom: true,
-      attributionControl: false,
-    }).setView(coords, 16);
-  }
-
+  /**
+   * Render the map to the DOM
+   * @param {Array<latitue, longitude>} coords
+   * @param {string} map_url - Leaflet map url
+   * @param {string} attribution - Leaflet map attribution url
+   * @returns {Object} A map object is return
+   * @this {Object} an instance of MapView
+   * @public
+   * @author Prince Roy
+   */
   renderMap(coords, map_url, attribution) {
     this._loadMap(coords);
 
@@ -29,6 +29,22 @@ class MapView {
     });
 
     L.marker(coords, { icon: myIcon }).addTo(this._map);
+  }
+
+  /**
+   * Set co-ordinates of the map
+   * @param {Array<latitude,longitude>} coords
+   * @returns {}
+   * @protected
+   */
+  _loadMap(coords) {
+    this._map && this._map.remove() && this._map.off();
+
+    this._map = L.map('map', {
+      scrollWheelZoom: false,
+      smoothWheelZoom: true,
+      attributionControl: false,
+    }).setView(coords, 16);
   }
 }
 
