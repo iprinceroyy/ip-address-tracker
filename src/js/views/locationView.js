@@ -8,6 +8,7 @@ class LocationView {
   /**
    * Render the received object to the DOM
    * @param {Object} data - An object of data to be rendered
+   * @this {Object} An instance of LocationView
    * @returns {}
    * @public
    */
@@ -46,6 +47,7 @@ class LocationView {
   /**
    * Render a spinner to the DOM
    * @requires ../../images/spinner-gap.svg
+   * @this {Object} An instance of LocationView
    * @public
    */
   renderSpinner() {

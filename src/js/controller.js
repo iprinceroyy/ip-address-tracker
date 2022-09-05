@@ -20,6 +20,7 @@ const controlAddress = async () => {
     // 5) Render map
     const { map_url, attribution } = model.getMapUrls();
     const coords = [model.state.info.lat, model.state.info.lng];
+
     mapView.renderMap(coords, map_url, attribution);
   } catch (err) {
     console.log(`${err} 🤦‍♂️`);

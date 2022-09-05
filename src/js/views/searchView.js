@@ -24,6 +24,7 @@ class SearchView {
   /**
    * Add handler to the element
    * @param {function} handler - A callback function
+   * @this {Object} An object of SearchView
    * @public
    */
   addHandlerSearch(handler) {
