@@ -45,11 +45,6 @@ Users should be able to:
 
 I'm generally focusing on how to segment large code base into small components having unidirectional flow of data between them. I've used MVC Architecture to achieve it. Moreover, declarative paradigm is something that is facinating me more, using this paradigm to the utmost is my goal.
 
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
 - Twitter - [@prince_popups](https://www.twitter.com/@prince_popups)
