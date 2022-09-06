@@ -55,10 +55,10 @@ Users should be able to:
 
 - From the repo:
 
-  1. Clone this project locally
-  2. Type `cd <project directory>` in your bash / command line
-  3. Run `npm install` in your bash / command line
-  4. Run `npm run build` in your bash / command line
+1. Clone this project locally
+2. Type `cd <project directory>` in your bash / command line
+3. Run `npm install` in your bash / command line
+4. Run `npm run build` in your bash / command line
 
 ### Continued development
 
