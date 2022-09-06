@@ -8,6 +8,8 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
+  - [Dependencies](#dependencies)
+  - [Running this project locally](#running-locally)
   - [Continued development](#continued-development)
 - [Author](#author)
 
@@ -40,6 +42,23 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 - MVC Architecture
+
+### Dependencies
+
+- Parcel
+- Sass
+- Core-js
+- Leaflet
+- Regenerator-runtime
+
+### Running locally
+
+- From the repo:
+
+  1. Clone this project locally
+  2. Type `cd <project directory>` in your bash / command line
+  3. Run `npm install` in your bash / command line
+  4. Run `npm run build` in your bash / command line
 
 ### Continued development
 
