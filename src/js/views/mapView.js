@@ -24,7 +24,7 @@ class MapView {
 
     const myIcon = L.icon({
       iconUrl: markerIcon,
-      iconSize: [62, 70],
+      iconSize: [49, 57],
       popupAnchor: [-3, -76],
     });
 
