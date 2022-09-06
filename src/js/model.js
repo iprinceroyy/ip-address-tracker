@@ -1,4 +1,4 @@
-import { IP_API_URL, MAP_URL, ATTRIBUTION } from './config';
+import { IP_API_URL, MAP_URL, ATTRIBUTION, API_KEY } from './config';
 import { getJSON } from './helpers';
 
 export const state = {
@@ -12,9 +12,11 @@ export const state = {
  * @requires views/helpers.getJSON
  * @throws {Exception}
  */
-export const loadAddress = async ip => {
+export const loadAddress = async domain => {
   try {
-    const data = await getJSON(`${IP_API_URL}${ip}`);
+    const data = await getJSON(
+      `${IP_API_URL}?apiKey=${API_KEY}&domain=${domain}`
+    );
 
     state.info = {
       ip: data.ip,

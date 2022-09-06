@@ -9,10 +9,10 @@ const controlAddress = async () => {
     locationView.renderSpinner();
 
     // 2) Get IP
-    const ip = searchView.getQuery();
+    const query = searchView.getQuery();
 
     // 3) Load address
-    await model.loadAddress(ip);
+    await model.loadAddress(query);
 
     // 4) Render address
     locationView.render(model.state.info);

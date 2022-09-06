@@ -1,8 +1,9 @@
 import spinner from '../../images/spinner-gap.svg';
+import warning from '../../images/warning-outline.svg';
 
 class LocationView {
   _parentEl = document.querySelector('.tracker__info');
-  _errorMessage = `IP not found! Please check you internet connection & retry`;
+  _errorMessage = `IP not found! Please type correct IP / domain & retry`;
   _data;
 
   /**
@@ -21,15 +22,17 @@ class LocationView {
 
   /**
    * Render a error message to the DOM
-   * @param {string} err - An error message of the Error object
    * @this {Object} an instance of LocationView
    * @returns {}
    * @public
    */
-  renderError(err) {
+  renderError() {
     const markup = `
-    <p>${this._errorMessage} ${err.message}</p>
-    `;
+        <div class="error">
+          <img src="${warning}" alt="warning>
+          <p">${this._errorMessage}</p>
+        </div> 
+        `;
     this._addMarkup(markup);
   }
 
