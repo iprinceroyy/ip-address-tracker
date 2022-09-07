@@ -1,3 +1,5 @@
+import mapView from './mapView';
+
 /** @public */
 class SearchView {
   _parentEl = document.querySelector('.tracker__form');
@@ -11,6 +13,9 @@ class SearchView {
   getQuery() {
     const query = this._parentEl.querySelector('.tracker__form--input').value;
     this._clearInput();
+
+    mapView.clearMap();
+
     return query;
   }
 

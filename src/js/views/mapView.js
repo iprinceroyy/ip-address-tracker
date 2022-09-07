@@ -1,6 +1,7 @@
 import markerIcon from '../../images/icon-location.svg';
 
 class MapView {
+  _parentEl = document.querySelector('#map');
   _map;
 
   /**
@@ -45,6 +46,15 @@ class MapView {
       smoothWheelZoom: true,
       attributionControl: false,
     }).setView(coords, 16);
+  }
+
+  /**
+   * Clear the map container before rendering
+   * @this {Object} An instance of MapView
+   * @public
+   */
+  clearMap() {
+    this._parentEl.innerHTML = '';
   }
 }
 
