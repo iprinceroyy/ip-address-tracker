@@ -45,6 +45,7 @@ class MapView {
       scrollWheelZoom: false,
       smoothWheelZoom: true,
       attributionControl: false,
+      zoomControl: false,
     }).setView(coords, 16);
   }
 
