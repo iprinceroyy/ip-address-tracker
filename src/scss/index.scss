@@ -134,12 +134,11 @@
 }
 
 .data {
-  font-style: normal;
   display: flex;
   flex-direction: column;
   gap: clamp(0.4rem, 0.226rem + 0.73vw, 0.7rem);
 
-  span:nth-of-type(1) {
+  &--title {
     font-size: 0.75rem;
     letter-spacing: clamp(0.0625rem, 0.026rem + 0.15vw, 0.125rem);
     text-transform: uppercase;
@@ -147,9 +146,10 @@
     color: var.$dark-gray;
   }
 
-  span:nth-of-type(2) {
+  &--content {
     font-size: clamp(1.4rem, 1.3171rem + 0.35vw, 1.6rem);
     font-weight: var.$fw-700;
+    font-style: normal;
     color: var.$very-dark-gray;
     word-break: break-word;
   }
