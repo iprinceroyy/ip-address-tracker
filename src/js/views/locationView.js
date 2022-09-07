@@ -70,23 +70,23 @@ class LocationView {
   _generateMarkup() {
     return `
       <address class="data">
-        <p>ip address</p>
-        <p>${this._data.ip}</p>
+        <span>ip address</span>
+        <span>${this._data.ip}</span>
       </address>
 
       <address class="data">
-        <p>location</p>
-        <p>${this._data.city}, ${this._data.country} ${this._data.postalCode}</p>
+        <span>location</span>
+        <span>${this._data.city}, ${this._data.country} ${this._data.postalCode}</span>
       </address>
 
       <time class="data">
-        <p>timezone</p>
-        <p>UTC ${this._data.timezone}</p>
+        <span>timezone</span>
+        <span>UTC ${this._data.timezone}</span>
       </time>
 
       <address class="data">
-        <p>isp</p>
-        <p>${this._data.isp}</p>
+        <span>isp</span>
+        <span>${this._data.isp}</span>
       </address>
       `;
   }
