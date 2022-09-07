@@ -29,15 +29,10 @@
   }
 
   &--heading {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 1.268rem + 1.14vw, 2rem);
     text-align: center;
     font-weight: var.$fw-500;
-    color: hsl(0, 0%, 100%);
-
-    @media (min-width: 1024px) {
-      font-size: 2rem;
-      letter-spacing: 1px;
-    }
+    color: var.$white;
   }
 
   &__form {
