@@ -81,7 +81,7 @@ class LocationView {
 
       <div class="data">
         <span class="data--title">timezone</span>
-        <time class="data--content">UTC ${this._data.timezone}</time>
+        <span class="data--content">UTC ${this._data.timezone}</span>
       </div>
 
       <div class="data">
