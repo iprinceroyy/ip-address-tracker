@@ -15,7 +15,8 @@
 
 .tracker {
   position: relative;
-  padding: 1.5rem;
+  padding-block: clamp(1.5rem, 1.37rem + 0.53vw, 1.8rem);
+  padding-inline: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.7rem;
@@ -42,16 +43,16 @@
   &__form {
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: clamp(0.1875rem, 0.797rem + 0.33vw, 1.0625rem);
     overflow: hidden;
-    width: min(100%, 530px);
+    width: min(100%, 34.68rem);
   }
 
   &__form--input {
     width: 100%;
     border: none;
     outline: 3px solid transparent;
-    padding: 1rem;
+    padding: clamp(1rem, 0.917rem + 0.35vw, 1.2rem);
     font-family: inherit;
     font-size: var.$font-size;
     font-weight: var.$fw-400;
@@ -59,7 +60,8 @@
   }
 
   &__form--btn {
-    padding: 1.1rem 1.3rem;
+    padding-block: clamp(1.1rem, 1.017rem + 0.35vw, 1.3rem);
+    padding-inline: clamp(1.3rem, 1.21rem + 0.35vw, 1.5rem);
     background-color: var.$black;
     outline: 3px solid transparent;
     border: none;
@@ -97,7 +99,7 @@
 .tracker__info {
   width: min(88%, 1150px);
   position: absolute;
-  top: 10rem;
+  top: 10.125rem;
   z-index: 3;
   display: grid;
   gap: clamp(1.5rem, 1.292rem + 0.88vw, 2rem);
@@ -111,22 +113,7 @@
 
   @media (min-width: 1024px) {
     text-align: start;
-    top: 24.5vh;
-  }
-
-  p:nth-of-type(1) {
-    font-size: 0.8rem;
-    letter-spacing: clamp(0.0625rem, 0.026rem + 0.15vw, 0.125rem);
-    text-transform: uppercase;
-    font-weight: var.$fw-500;
-    color: var.$dark-gray;
-  }
-
-  p:nth-of-type(2) {
-    font-size: clamp(1.4rem, 1.3171rem + 0.35vw, 1.6rem);
-    font-weight: var.$fw-700;
-    color: var.$very-dark-gray;
-    word-break: break-word;
+    top: 25.3vh;
   }
 }
 
@@ -157,6 +144,21 @@
   display: flex;
   flex-direction: column;
   gap: clamp(0.4rem, 0.226rem + 0.73vw, 0.7rem);
+
+  p:nth-of-type(1) {
+    font-size: 0.75rem;
+    letter-spacing: clamp(0.0625rem, 0.026rem + 0.15vw, 0.125rem);
+    text-transform: uppercase;
+    font-weight: var.$fw-500;
+    color: var.$dark-gray;
+  }
+
+  p:nth-of-type(2) {
+    font-size: clamp(1.4rem, 1.3171rem + 0.35vw, 1.6rem);
+    font-weight: var.$fw-700;
+    color: var.$very-dark-gray;
+    word-break: break-word;
+  }
 
   &:not(&:last-child) {
     @media (min-width: 1024px) {
