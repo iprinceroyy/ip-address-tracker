@@ -142,15 +142,15 @@
     font-size: 0.75rem;
     letter-spacing: clamp(0.0625rem, 0.026rem + 0.15vw, 0.125rem);
     text-transform: uppercase;
-    font-weight: var.$fw-500;
+    font-weight: var.$fw-700;
     color: var.$dark-gray;
   }
 
   &--content {
     font-size: clamp(1.4rem, 1.3171rem + 0.35vw, 1.6rem);
-    font-weight: var.$fw-700;
+    font-weight: var.$fw-500;
     font-style: normal;
-    color: var.$very-dark-gray;
+    color: var.$black;
     word-break: break-word;
   }
 
